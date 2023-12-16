@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, [Metta]!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            margin: 50px;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #e44d26;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333333;
+        }
+
+        #message-input {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        #submit-button {
+            padding: 10px 20px;
+            background-color: #e44d26;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #birthday-message {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Happy Birthday, [Metta]!</h1>
+        <p>Enter your special birthday message below:</p>
+
+        <input type="text" id="message-input" placeholder="Type your message here">
+
+        <button id="submit-button" onclick="showMessage()">Submit</button>
+
+        <div id="birthday-message">
+            <p id="output-message"></p>
+            <p>Thank you for celebrating this special day with me!</p>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            var inputMessage = document.getElementById("message-input").value;
+            document.getElementById("output-message").innerHTML = inputMessage;
+            document.getElementById("birthday-message").style.display = "block";
+            document.getElementById("message-input").style.display = "none";
+            document.getElementById("submit-button").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
